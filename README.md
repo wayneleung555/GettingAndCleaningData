@@ -13,7 +13,7 @@ The run_analysis.R file read accerlerometers and gyroscrope data from https://d3
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 
-### library used
+### Library used
 * data.table and dplyr 
 
 ### Data Structure
@@ -57,7 +57,7 @@ The run_analysis.R file read accerlerometers and gyroscrope data from https://d3
 ### Columns with only mean and standard deviation  
 * Mean.SD.Data <- mergedData[,names.Mean.SD.idx]     
 
-### add the columne of activities and subject
+### Add the columne of activities and subject
 * extractedData <- cbind(Mean.SD.dData, mergedData[, c(562,563)])   # dim(extractedData) give 10299 rows 88 variables
 
 
@@ -102,4 +102,5 @@ for (i in 1:6){
 ###  Calculate avearge by subject and Activity
 * tidyData <- aggregate(. ~ Subject + Activity, data = extractedData, FUN=mean, na.rm=TRUE)
 * tidyData <- tidyData[order(tidyData$Subject,tidyData$Activity),]
+##### Output the data to the Tidy.txt file for submision
 * write.table(tidyData, file = "Tidy.txt", row.names = FALSE)  
