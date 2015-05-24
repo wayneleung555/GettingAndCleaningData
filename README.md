@@ -73,12 +73,12 @@ for (i in 1:6){
 
 
 ## 4. Appropriately labels the data set with descriptive variable names.
-### replace Acc by Accelerometer
-### replace Gyro by Gyroscope
-### replace BodyBody by Body
-### replace Mag by Magnitude
-### replace f by Frequency
-### replace t by Time
+##### replace Acc by Accelerometer
+##### replace Gyro by Gyroscope
+##### replace BodyBody by Body
+##### replace Mag by Magnitude
+##### replace f by Frequency
+##### replace t by Time
 * names(extractedData)<-gsub("Acc", "Accelerometer", names(extractedData))
 * names(extractedData)<-gsub("Gyro", "Gyroscope", names(extractedData))
 * names(extractedData)<-gsub("BodyBody", "Body", names(extractedData))
