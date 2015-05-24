@@ -97,3 +97,17 @@
 * Angle(X,GravityMean) : angle between X direction and average gravity
 * Angle(Y,GravityMean) : angle between Y direction and average gravity
 * Angle(Z,GravityMean) : angle between Z direction and average gravity
+
+
+
+
+## Steps has been taken to create the above variables from raw data :
+* Read in data for subjects, activities and features. Do this for train and test respectively.
+* Attach labels to activities. 
+* Combine train and test data.
+* Keep only the relevant variables : mean and standard deviation of measurements. Remove the rest of data.
+* Rename the variables names to become easily understand.
+* Calculate the average of data by subjects and acticities.
+* Order the data by subject , then by activities for easy reading.
+* Output the data to a Tidy.txt.
+
