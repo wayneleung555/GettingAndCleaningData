@@ -79,6 +79,7 @@ for (i in 1:6){
 ##### replace Mag by Magnitude
 ##### replace f by Frequency
 ##### replace t by Time
+##### remove () in the names
 * names(extractedData)<-gsub("Acc", "Accelerometer", names(extractedData))
 * names(extractedData)<-gsub("Gyro", "Gyroscope", names(extractedData))
 * names(extractedData)<-gsub("BodyBody", "Body", names(extractedData))
@@ -91,9 +92,6 @@ for (i in 1:6){
 * names(extractedData)<-gsub("-freq()", "Frequency", names(extractedData), ignore.case = TRUE)
 * names(extractedData)<-gsub("angle", "Angle", names(extractedData))
 * names(extractedData)<-gsub("gravity", "Gravity", names(extractedData))
-
-
-#### remove () in the names
 * names(extractedData)<-gsub("\\()", "",names(extractedData) ,)
 
 
