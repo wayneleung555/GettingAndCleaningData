@@ -4,7 +4,7 @@
 #### No of Variables : 88
 #### No of observations : 180 (30 subjects x 6 activity)
 
-##### Note As features are normalized and bounded within [-1,1], the mean of mean and standard deviation are also bounded within [-1,1]. 
+##### Note : As features are normalized and bounded within [-1,1], the mean of mean and standard deviation are also bounded within [-1,1]. 
 
 
 
