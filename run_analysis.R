@@ -98,6 +98,7 @@ for (i in 1:6){
 # replace Mag by Magnitude
 # replace f by Frequency
 # replace t by Time
+# remove () in the names
 names(extractedData)<-gsub("Acc", "Accelerometer", names(extractedData))
 names(extractedData)<-gsub("Gyro", "Gyroscope", names(extractedData))
 names(extractedData)<-gsub("BodyBody", "Body", names(extractedData))
@@ -110,14 +111,11 @@ names(extractedData)<-gsub("-std()", "STD", names(extractedData), ignore.case = 
 names(extractedData)<-gsub("-freq()", "Frequency", names(extractedData), ignore.case = TRUE)
 names(extractedData)<-gsub("angle", "Angle", names(extractedData))
 names(extractedData)<-gsub("gravity", "Gravity", names(extractedData))
-
-
-
+names(extractedData)<-gsub("\\()", "",names(extractedData) ,)
 
 
 
 ## 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-
 extractedData$Subject <- as.factor(extractedData$Subject)
 extractedData <- data.table(extractedData)
 
