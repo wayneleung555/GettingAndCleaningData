@@ -93,6 +93,9 @@ for (i in 1:6){
 * names(extractedData)<-gsub("gravity", "Gravity", names(extractedData))
 
 
+#### remove () in the names
+* names(extractedData)<-gsub("\\()", "",names(extractedData) ,)
+
 
 ## 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 * extractedData$Subject <- as.factor(extractedData$Subject)
