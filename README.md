@@ -17,9 +17,9 @@ The run_analysis.R file read accerlerometers and gyroscrope data from https://d3
 data.table and dplyr 
 
 # Data Structure
-. features.txt : 561 features
-. activity_labels.txt : 6 activities labels
-. subjects : 30 persons (31 train and 9 test)
+1. features.txt : 561 features
+2. activity_labels.txt : 6 activities labels
+3. subjects : 30 persons (31 train and 9 test)
 
 
 # Read in train Data
