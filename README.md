@@ -103,5 +103,5 @@ for (i in 1:6){
 * tidyData <- aggregate(. ~ Subject + Activity, data = extractedData, FUN=mean, na.rm=TRUE)
 * tidyData <- tidyData[order(tidyData$Subject,tidyData$Activity),]
 
-##### Output the data to the Tidy.txt file for submision
+##### Output the data to the Tidy.txt file for submission
 * write.table(tidyData, file = "Tidy.txt", row.names = FALSE)  
