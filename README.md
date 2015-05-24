@@ -51,7 +51,7 @@ The run_analysis.R file read accerlerometers and gyroscrope data from https://d3
 
 
 ## 2. Extracts only the measurements on the mean and standard deviation for each measurement. 
-### obtain index of columns of means or standard deviation
+### Obtain index of columns of means or standard deviation
 * names.Mean.SD.idx <- grep("mean|std", names(mergedData), ignore.case=TRUE)
 
 ### Columns with only mean and standard deviation  
@@ -62,8 +62,8 @@ The run_analysis.R file read accerlerometers and gyroscrope data from https://d3
 
 
 ## 3. Uses descriptive activity names to name the activities in the data set
-### change from numeric to character , to be able to accept descriptive values
-### attach descriptive values
+### Change from numeric to character , to be able to accept descriptive values
+### Attach descriptive values
 extractedData$Activity <- as.character(extractedData$Activity)
 for (i in 1:6){
         extractedData$Activity[extractedData$Activity == i] <- as.character(activityLabels[i,2])
