@@ -2,7 +2,7 @@
 This repository is for the purpose of submitting course assignment for Getting And Cleaning Data
 
 
-# Steps of the run_analysis.R file
+## Steps of the run_analysis.R file
 The run_analysis.R file read accerlerometers and gyroscrope data from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip, then calculate the means of each measuremnt and output it in a Tidy.txt file. 
 
 
@@ -13,23 +13,25 @@ The run_analysis.R file read accerlerometers and gyroscrope data from https://d3
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 
-# library
+### library
 data.table and dplyr 
 
-# Data Structure
+### Data Structure
 * features.txt : 561 features
 * activity_labels.txt : 6 activities labels
 * subjects : 30 persons (31 train and 9 test)
 
 
-# Read in train Data
+### Read in train Data for subject, activities and features respectively
 * subjectTrain  <- read.table("./UCI HAR Dataset/train/subject_train.txt", header = FALSE)
 * activityTrain <- read.table("./UCI HAR Dataset/train/y_train.txt", header = FALSE)
 * featuresTrain <- read.table("./UCI HAR Dataset/train/X_train.txt", header = FALSE) 
 
 
-
-
+### Read in test Data for subject, activities and features respectively
+subjectTest  <- read.table("./UCI HAR Dataset/test/subject_test.txt", header = FALSE)
+activityTest <- read.table("./UCI HAR Dataset/test/y_test.txt", header = FALSE)
+featuresTest <- read.table("./UCI HAR Dataset/test/X_test.txt", header = FALSE) 
 
 
 
