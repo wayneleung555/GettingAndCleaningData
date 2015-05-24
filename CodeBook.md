@@ -1,14 +1,14 @@
 # This CodeBook mark down file is a description of the variables created by run_analysis.R
 
-# The following variables are outputs of run_analysis.R and stored in Tidy.txt
-### No of Variables : 88
-### No of observations : 180 (30 subjects x 6 activity)
+### The following variables are outputs of run_analysis.R and stored in Tidy.txt
+#### No of Variables : 88
+#### No of observations : 180 (30 subjects x 6 activity)
 
-#### Note As features are normalized and bounded within [-1,1], the mean of mean and standard deviation are also bounded within [-1,1]. 
+##### Note As features are normalized and bounded within [-1,1], the mean of mean and standard deviation are also bounded within [-1,1]. 
 
 
 
-## Name of variables and descriptions:
+### Name of variables and descriptions:
 * Subject : Identifier of 30 persons
 * Activity : Each person performed 6 activities : LAYING, SITTING, STANDING, WALKING, WALKING_DOWNSTAIRS and WALKING_UPSTAIR 
 * TimeBodyAccelerometerMean()-X : average time of body accelerometer in X direction
