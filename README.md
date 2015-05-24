@@ -58,7 +58,7 @@ The run_analysis.R file read accerlerometers and gyroscrope data from https://d3
 * Mean.SD.Data <- mergedData[,names.Mean.SD.idx]     
 
 ### Add the columne of activities and subject
-* extractedData <- cbind(Mean.SD.dData, mergedData[, c(562,563)])   # dim(extractedData) give 10299 rows 88 variables
+* extractedData <- cbind(Mean.SD.dData, mergedData[, c(562,563)])   
 
 
 ## 3. Uses descriptive activity names to name the activities in the data set
@@ -102,5 +102,6 @@ for (i in 1:6){
 ###  Calculate avearge by subject and Activity
 * tidyData <- aggregate(. ~ Subject + Activity, data = extractedData, FUN=mean, na.rm=TRUE)
 * tidyData <- tidyData[order(tidyData$Subject,tidyData$Activity),]
+
 ##### Output the data to the Tidy.txt file for submision
 * write.table(tidyData, file = "Tidy.txt", row.names = FALSE)  
