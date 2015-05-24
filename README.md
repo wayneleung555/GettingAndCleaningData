@@ -13,8 +13,8 @@ The run_analysis.R file read accerlerometers and gyroscrope data from https://d3
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 
-### library
-data.table and dplyr 
+### library used
+* data.table and dplyr 
 
 ### Data Structure
 * features.txt : 561 features
@@ -41,12 +41,12 @@ data.table and dplyr
 * features <- rbind(featuresTrain, featuresTest) 
  
 
-###  assign names manually for subject and activity
+### Assign names manually for subject and activity
 * colnames(features) <- t(featuresLabels[2])
 * colnames(subject) <- "Subject" 
 * colnames(activity) <- "Activity" 
 
-### combine the columns of features, subjects and activity
+### Combine the columns of features, subjects and activity
 * mergedData <- cbind(features, subject, activity) 
 
 
@@ -54,7 +54,7 @@ data.table and dplyr
 ### obtain index of columns of means or standard deviation
 * names.Mean.SD.idx <- grep("mean|std", names(mergedData), ignore.case=TRUE)
 
-### columns with only mean and standard deviation  
+### Columns with only mean and standard deviation  
 * Mean.SD.Data <- mergedData[,names.Mean.SD.idx]     
 
 ### add the columne of activities and subject
@@ -99,7 +99,7 @@ for (i in 1:6){
 * extractedData <- data.table(extractedData)
 
 
-###  calculate avearge by subject and Activity
+###  Calculate avearge by subject and Activity
 * tidyData <- aggregate(. ~ Subject + Activity, data = extractedData, FUN=mean, na.rm=TRUE)
 * tidyData <- tidyData[order(tidyData$Subject,tidyData$Activity),]
 * write.table(tidyData, file = "Tidy.txt", row.names = FALSE)  
