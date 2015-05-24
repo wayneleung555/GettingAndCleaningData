@@ -126,4 +126,6 @@ extractedData <- data.table(extractedData)
 # calculate avearge by subject and Activity
 tidyData <- aggregate(. ~ Subject + Activity, data = extractedData, FUN=mean, na.rm=TRUE)
 tidyData <- tidyData[order(tidyData$Subject,tidyData$Activity),]
+
+# output a Tidy.txt file for the summarised data
 write.table(tidyData, file = "Tidy.txt", row.names = FALSE)      # write the average to Tidy.txt
